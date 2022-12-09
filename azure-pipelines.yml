@@ -11,12 +11,12 @@ jobs:
       echo See https://aka.ms/yaml  
     displayName: 'Run a multi-line script'
 - job: job2
-  dependson: jobl
+  dependsOn: job1
   steps:
   - script: echo Job2
     displayName: 'Run a one-line script'
 - job: job3 
-  dependson: job2
+  dependsOn: job2
   steps:
   - script: echo Job3
     displayName: 'Run a one-line script'
