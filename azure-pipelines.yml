@@ -1,26 +1,23 @@
-trigger:
-- master
-
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: ubuntu-latest'
 jobs:
 - job: jobl
   steps:
-  - script: echo Jobl - Hello, world! Changed
+  - script: echo Jobl Hello, world! Changed 
     displayName: 'Run a one-line script'
-
-  - script: |
-      echo Add other tasks to build, test, and deploy your project.
-      echo See https://aka.ms/yaml
-	  displayName: 'Run a multi-line scripts'
+ 
+  - script:|
+      echo Add other tasks to build, test, and deploy your project. 
+	  echo See https://aka.ms/yaml
+    displayName: 'Run a multi-line scripts'
 - job: job2
-  dependson: jobl
+  dependsOn: jobl
   steps:
-  - script: echo Job2
+  - script: echo Job2 
     displayName: 'Run a one-line script'
 - job: job3 
-  dependson: job2
-  steps:
+  dependsOn: job2
+  steps: 
   - script: echo Job3
     displayName: 'Run a one-line script'
 - job: job4 
